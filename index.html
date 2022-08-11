@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chopmas Pizza</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body class="bg-info bg-opacity-10">
+  <main>
+    <section class="pizza">
+      <div class="pizza__container container">
+        <h1 class="pizza__heading link-primary text-center mt-5">Order <span class="link-danger">your favourite</span> pizza!</h1>
+
+        <div class="pizza__result-box mx-auto row mt-5">
+          <form class="pizza__form form col-7 border-end border-5 border-primary" id="site-form">
+            <div class="box__bread bread pb-3">
+              <h3 class="bread__heading link-success fw-bold m-0">Select desired bread!</h3>
+
+              <select class="bread__selection border-0 pt-2 pb-2 ps-3 pe-3 rounded-5 shadow mt-3">
+                <option value="selected-bread" selected hidden>Bread</option>
+                <option value="thick">Thick</option>
+                <option value="middle">Middle</option>
+                <option value="thin">Thin</option>
+              </select>
+            </div>
+
+            <div class="box__size size mt-3">
+              <h3 class="size__heading link-info fw-bold m-0 mb-4 class">Select desired size!</h3>
+
+              <label class="size__label">
+                <input class="size__radio-first visually-hidden" type="radio" name="pizza-size">
+
+                <span class="size__vision1 p-2 border border-3 border-info rounded-5 me-2" name="pizza-size">25 cm</span>
+              </label>
+
+              <label class="size__label">
+                <input class="size__radio-second visually-hidden" type="radio" name="pizza-size">
+
+                <span class="size__vision2 p-2 border border-3 border-info rounded-5 me-2" name="pizza-size">30 cm</span>
+              </label>
+              
+              <label class="size__label">
+                <input class="size__radio-third visually-hidden" type="radio" name="pizza-size">
+
+                <span class="size__vision3 p-2 border border-3 border-info rounded-5" name="pizza-size">35 cm</span>
+              </label>
+            </div>
+
+            <div class="box__surface surface mt-5">
+              <h3 class="surface__heading link-warning fw-bold m-0 mb-4 class">Select desired surface item!</h3>
+
+              <div class="surface__box box d-flex">
+                <div class="box__first d-flex flex-column">
+                  <label class="box__label">
+                    <input class="box__check-tomato checkbox-surface" value="Tomato" type="checkbox">
+    
+                    <span class="box__value link-success fw-bold">Tomato</span>
+                  </label>
+
+                  <label class="box__label">
+                    <input class="box__check-meat checkbox-surface" value="Meat" type="checkbox">
+    
+                    <span class="box__value link-success fw-bold">Meat</span>
+                  </label>
+
+                  <label class="box__label">
+                    <input class="box__check-cheese checkbox-surface" value="Cheese" type="checkbox">
+    
+                    <span class="box__value link-success fw-bold">Cheese</span>
+                  </label>
+                </div>
+
+                <div class="box__first d-flex flex-column ms-4">
+                  <label class="box__label">
+                    <input class="box__check-hen checkbox-surface" value="Hen Meat" type="checkbox">
+    
+                    <span class="box__value link-success fw-bold">Hen Meat</span>
+                  </label>
+
+                  <label class="box__label">
+                    <input class="box__check-cucumber checkbox-surface" value="Cucumber" type="checkbox">
+    
+                    <span class="box__value link-success fw-bold">Cucumber</span>
+                  </label>
+
+                  <label class="box__label">
+                    <input class="box__check-mushrooms checkbox-surface" value="Mushrooms" type="checkbox">
+    
+                    <span class="box__value link-success fw-bold">Mushrooms</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="additions mt-4">
+              <h3 class="additions__heading fw-bold link-secondary">Select desired addition!</h3>
+
+              <label class="additions__label d-block">
+                <input class="additions__check-spicy" value="Spicy" type="checkbox">
+
+                <span class="additions__content link-primary fw-bold">Spicy</span>
+              </label>
+
+              <label class="additions__label d-block">
+                <input class="additions__check-tasty" value="Tasty" type="checkbox">
+
+                <span class="additions__content link-primary fw-bold">Tasty</span>
+              </label>
+
+              <label class="additions__label d-block">
+                <input class="additions__check-pineapple" value="Pineapple" type="checkbox">
+
+                <span class="additions__content link-primary fw-bold">Pineapple</span>
+              </label>
+            </div>
+          </form>
+          <div class="pizza__result col-5">
+            <div class="pizza__result-bread result-bread col-5 align-items-center mt-2 ms-2 mb-4">
+              <h3 class="result-bread__heading link-success fw-bold m-0 d-block">Bread:</h3>
+
+              <p class="result-bread__text fw-bolder link-primary h4 m-0 d-block mt-2"></p>
+            </div>
+
+            <div class="pizza__result-size result-size col-5 align-items-center ms-2 me-0 mt-3">
+              <h3 class="result-size__heading d-inline-block link-info fw-bold m-0 d-block">Size:</h3>
+
+              <p class="result-size__text d-inline-block fw-bolder link-warning h4 m-0 mt-2"></p>
+            </div>
+
+            <div class="pizza__result-surface result-surface col-5 ms-2 mb-4">
+              <h3 class="result-surface__heading link-success fw-bold m-0 mt-4">Surface:</h3>
+
+              <div class="result-surface__list-box d-flex mt-2">
+                <ul class="result-surface__list-left list-unstyled me-3 link-danger fw-bold border-end border-3 fw-bold border-dark pe-3"></ul>
+
+                <ul class="result-surface__list-right list-unstyled fw-bold link-danger"></ul>
+              </div>
+            </div>
+
+            <div class="pizza__result-additions result-additions col-5 mt-3 ms-2 mb-4">
+              <h3 class="result-additions__heading link-info fw-bold m-0 mt-2">Additions:</h3>
+              
+              <ul class="result-additions__list mt-3 fw-bold link-dark list-unstyled"></ul>
+            </div>
+
+            <button class="order__button border-5 border-success pt-3 pb-3 ps-5 mt-3 pe-5 shadow bg-white rounded-5 ms-3 fw-bold link-success" form="site-form" type="submit">Order!</button>
+
+            <p class="final__text-saver mt-3 ms-3 fw-bold link-info fs-4"></p>
+          </div>
+        </div>
+      </div> 
+    </section>
+  </main>
+  <script src="./js/settings.js"></script>
+</body>
+</html>

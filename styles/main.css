@@ -1,0 +1,17 @@
+/* Resultdagi html elementlarni joyini saqlab qolish maqsadida */
+
+.pizza__result-surface {
+  height: 100px;
+}
+
+.pizza__result-additions {
+  height: 100px;
+}
+
+.pizza__result-size {
+  height: 50px;
+}
+
+.pizza__result-bread {
+  height: 50px;
+}
